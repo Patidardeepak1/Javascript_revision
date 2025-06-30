@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body style="background-color: #212121 ;color: #fff;">
+    <div class="card">
+        <img id="image" src="img_avatar.png" alt="Avatar" style="width:100%">
+        <div class="container">
+          <h4><b>John Doe</b></h4>
+          <p>Architect & Engineer</p>
+        </div>
+      </div> 
+</body>
+<script>
+    const requesturl="https://api.github.com/users/hiteshchoudhary";
+   const xhr = new  XMLHttpRequest()
+   xhr.open('GET',requesturl);
+   xhr.onreadystatechange=function(){
+    if(xhr.readyState===4){
+        const data=JSON.parse(this.responseText);
+
+        console.log(data.followers);
+        // const followers=data.followers;
+        // const imgUrl=data.avatar_url;
+    }
+}
+
+
+
+
+</script>
+</html>
+
+
+
+
